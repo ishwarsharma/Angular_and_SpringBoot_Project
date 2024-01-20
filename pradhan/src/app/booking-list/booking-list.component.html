@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <h1>Booking List</h1>
+
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Education</th>
+                <th>Accommodation Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <div *ngIf="bookings.length === 0">Loading bookings...</div>
+            <ng-container *ngIf="bookings.length > 0">
+                <tr *ngFor="let booking of bookings">
+                    <td>{{ booking.id }}</td>
+                    <td>{{ booking.name }}</td>
+                    <td>{{ booking.gender }}</td>
+                    <td>{{ booking.phoneNumber }}</td>
+                    <td>{{ booking.email }}</td>
+                    <td>{{ booking.education }}</td>
+                    <td>{{ booking.accommodationType }}</td>
+                    <td>
+                        <!-- <button class="btn btn-primary btn-sm" (click)="editBooking(booking.id)">Edit</button> -->
+                        <button class="btn btn-danger btn-sm ms-2" (click)="deleteBooking(booking.id)">Delete</button>
+                        <button class="btn btn-info btn-sm ms-2"
+                            (click)="navigateToUpdateBooking(booking.id)">Update</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+
+    <hr />
+</div>

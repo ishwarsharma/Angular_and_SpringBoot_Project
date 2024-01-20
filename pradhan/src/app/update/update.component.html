@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <h1>Update Booking</h1>
+
+    <form [formGroup]="editForm" (ngSubmit)="updateData()" class="row g-3">
+        <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select" id="gender" formControlName="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phoneNumber" formControlName="phoneNumber" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="education" class="form-label">Education</label>
+            <input type="text" class="form-control" id="education" formControlName="education" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="accommodationType" class="form-label">Accommodation Type</label>
+            <input type="text" class="form-control" id="accommodationType" formControlName="accommodationType" required>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary mt-3">Update Booking</button>
+        </div>
+    </form>
+</div>

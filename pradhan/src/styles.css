@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rock Salt", cursive;
+  }
+  
+  .header-extradiv {
+    width: 100;
+    height: auto;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .header-extradiv .extra-div {
+    background: #fff;
+    border: medium none;
+    padding: 50px !important;
+    border-radius: 3px;
+    transition: 0.3s;
+  
+  }
+  
+  .header-extradiv .extra-div h2 {
+  
+    font-size: 0.9rem;
+    margin: 20px 0 15px 0;
+    font-size: bold;
+    line-height: 1.1;
+    word-spacing: 4px;
+  }
+  
+  .header-extradiv .extra-div:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    border-radius: 20px;
+  }
+  
+  .header-section {
+    width: 100%;
+    height: inherit;
+    color: white;
+    text-align: center;
+    position: relative;
+  
+  }
+  
+  .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  
+  
+  #hero {
+    background-image: linear-gradient(rgba(0, 168, 255, 0.3), rgba(0, 168, 255, 0.3)), 
+    url(assets/p.jpg);
+    position: relative;
+    /* it will make a image pentagon shape */
+    clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0% 75%, 0 0);
+    transition: opacity 1s ease-in;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .center-div {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: (-50%, -50%);
+  }
+  
+  .center-div a {
+    border: 1px solid #fff;
+    border-radius: 100px;
+    margin: 0 5px;
+    font-size: 1rem;
+  }
+  
+  .center-div p {
+    font-size: 1.3rem;
+    padding: 6px 0 5px 0;
+    color: #fff;
+  }
+  
+  #hero:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.3;
+    background: linear-gradient(to right, rgba(0, 168, 255, 0.3), rgba(0, 168, 255, 0.3))
+  }
+  
+  .container.active {
+    opacity: 1;
+  }
+  
+  
+  /* padding for the signup and login button */
+  .navbar .navbar-nav .nav-but {
+    padding: 10px;
+  }

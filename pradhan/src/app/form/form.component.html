@@ -1,0 +1,70 @@
+<div id="hero1" class="justify-content-center">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4 mt-2 mb-2">
+                <h2 class="text-uppercase mb-4 text-center">Booking Form</h2>
+                <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" formControlName="name"
+                            placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" formControlName="phoneNumber"
+                            placeholder="Enter your phone number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" formControlName="email"
+                            placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="male" formControlName="gender"
+                                value="male">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="female" formControlName="gender"
+                                value="female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="other" formControlName="gender"
+                                value="other">
+                            <label class="form-check-label" for="other">Other</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="education" class="form-label">Education</label>
+                        <select class="form-control" id="education" formControlName="education">
+                            <option value="btech">BTech</option>
+                            <option value="diploma">Diploma</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Accommodation Type</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="pg" formControlName="accommodationType"
+                                value="pg">
+                            <label class="form-check-label" for="pg">PG</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="selfCook"
+                                formControlName="accommodationType" value="selfCook">
+                            <label class="form-check-label" for="selfCook">Self Cook</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+     <!-- Display SweetAlert2 after form submission -->
+  <div [hidden]="!showSuccessMessage">
+    <!-- No script tag here. The SweetAlert2 logic is handled in the TypeScript file. -->
+  </div>
+
+</div>

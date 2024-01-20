@@ -1,0 +1,14 @@
+/* in your component's CSS file (e.g., navbar.component.css) */
+.house-icon {
+    background: hsl(106, 95%, 31%);
+    color: white solid;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+  }
+  
+
+  
